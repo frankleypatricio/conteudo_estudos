@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h2>Login</h2>
+	<form action="login.php"> <!-- Action: o form vai ter ação em tal arquivo -->
+		<label for="usuário">Usuário: </label><br>
+		<input type="text" name="usuário" placeholder="Digite seu nome de usuário"><br>
+		<label for="senha">Senha: </label><br>
+		<input type="password" name="senha" placeholder="Digite sua senha"><br>
+		<input type="submit" name="entrar" value="Entrar">
+	</form>
+
+	<br><br>
+
+	<form action="cadastro.php">
+		<h2>Cadastro</h2>
+		<label for="new-usuário">Usuário: </label><br>
+		<input type="text" name="new-usuário" placeholder="Digite seu nome de usuário"><br>
+		<label for="new-senha">Senha: </label><br>
+		<input type="password" name="new-senha" placeholder="Digite sua senha"><br>
+		
+		<label for="sexo">Sexo: </label><br>
+		<input type="radio" name="sexo" value="masc">Masculino <!-- Usar mesmo nome para definir ligação entre radio buttons -->
+
+		<input type="radio" name="sexo"  value="femi">Feminino <br>
+		<label for="interesses">Interesses: </label><br>
+		<input type="checkbox" name="interesses" value="cin">Cinema
+		<input type="checkbox" name="interesses" value="art">Arte
+		<input type="checkbox" name="interesses" value="esp">Esporte
+		<input type="checkbox" name="interesses" value="gam">Games <br>
+
+		<label for="estado">Estado: </label><br>
+		<select name="estado"> <!-- ComboBox -->
+			<option value="sp">SP</option>
+			<option value="mg">MG</option>
+			<option value="sc">SC</option>
+			<option value="rj">RJ</option>
+		</select><br>
+
+		<label for="obs">Observações: </label><br>
+		<textarea></textarea><br>
+
+		<input type="submit" name="cadastrar" value="Cadastar">
+	</form>
+</body>
+</html>

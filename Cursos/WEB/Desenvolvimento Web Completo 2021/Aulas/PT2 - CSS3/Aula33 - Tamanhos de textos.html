@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Div and Span</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			color: white;
+		}
+		body{
+			background-color: #313B45;
+		}
+		.parag{
+			font-size: 20px;
+		}
+		#px{
+			/*
+			UNIDADES DE MEDIDA
+			px -> Tamanho fixo em pixels
+			% -> Tamanho relativo ao padrão do elemento (ou do pai, se estiver setado como na div desse sitezinho)
+			em -> Tamanho relativo ao container pai
+			*/
+			font-size: 60px;
+		}
+		#pc{
+			font-size: 120%;
+		}
+		#em{
+			font-size: 1em; /*1em equivale a 20px, 2em equivale a 40px, e por aí vai*/
+		}
+	</style>
+</head>
+<body>
+	<div class="parag">
+		<p id="px">Texto</p>
+		<p id="pc">Texto</p>
+		<p id="em">Texto</p>
+	</div>
+</body>
+</html>

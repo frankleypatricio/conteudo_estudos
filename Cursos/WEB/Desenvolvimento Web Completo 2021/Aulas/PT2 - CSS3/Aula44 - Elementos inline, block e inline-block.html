@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>44. Elementos inline, block e inline-block</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.block{
+			background: grey;
+			color: white;
+		}
+		.inline{
+			background: grey;
+			color: white;
+		}
+		.inline-block{
+			background: grey;
+			color: white;
+			display: inline-block;
+			/* PODEMOS ALTERAR TAMBÉM PRA BLOCK E INLINE */
+			/*display: block;
+			display: inline;*/
+		}
+	</style>
+</head>
+<body>
+	<!-- ELEMENTOS BLOCK OCUPAM TODO O ESPAÇO DA TELA NA LARGURA E FICAM UM ABAIXO DO OUTRO -->
+	<p class="block">Block 1</p>
+	<h4 class="block">Block 2</h1>
+	<table class="block">Block 3</table>
+
+	<br><br>
+	<!-- ELEMENTOS INLINE FICAM UM NA FRENTE DO OUTRO E SUA LARGURA É PROPORCIONAL -->
+	<a class="inline">Inline 1</a>
+	<span class="inline">Inline 2</span>
+	<img class="inline">Inline 3</img>
+
+	<br><br>
+	<!-- ELEMENTOS INLINE-BLOCK TEM A LARGURA PROPORCIONAL E FICAM UM ABAIXO DO OUTR -->
+	<!-- PARA USAR SÓ COLOCAR DISPLAY: INLINE-BLOCK; -->
+	<p class="inline-block">Inline-Block 1</p>
+	<span class="inline-block">Inline-Block 2</span>
+</body>
+</html>

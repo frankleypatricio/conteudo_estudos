@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>90-. Novas tags html 5</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			background: #ccc;
+			border: 1px solid red;
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+		nav{
+			background: #D3D3BC;
+			border: 1px solid green;
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+		footer{
+			background: #ccc;
+			border: 1px solid blue;
+			padding: 5px;
+			clear: both;
+		}
+
+		article{
+			border: 1px solid black;
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+		section{
+			background: #D6FFF7;
+			border: 1px solid orange;
+			padding: 5px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		aside{
+			border: 1px solid pink;
+			padding: 5px;
+			position: relative;
+			float: right;
+			margin-bottom: 5px;
+		}
+	</style>
+
+	<!-- Compatibilidade com HTML5 para navegadores antigos (HTML5 Shiv) -->
+	<!--[if lt IE 9]> - Se for anterior a versão 9 do internet explorer
+		<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<h1>Cabeçalho</h1>
+		<span>Acessa meu site</span>
+	</header>
+
+	<nav>
+		<h3>Navegação</h3>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Sobre</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+
+	<article>
+		<h3>Postagem / Artigo</h3>
+		<p>Vestibulum orci libero, egestas at velit eu, ullamcorper viverra ipsum. Suspendisse a ipsum id quam laoreet eleifend.</p>
+		<h3 style="margin: 3px 0 3px 0">Cursos</h3>
+		<section>
+			<h4>Seção 1</h4>
+			<ul>
+				<li>Programação</li>
+				<li>Mecânica</li>
+				<li>Elétrica</li>
+			</ul>
+			<br><span>Postado em: <time>16/02/2021</time></span> <!-- Datas -->
+		</section>
+		<section>
+			<h4>Seção 2</h4>
+			<ul>
+				<li>Administração</li>
+				<li>Contabilidade</li>
+				<li>Direito</li>
+			</ul>
+			<br><span>Postado em: <time>17/02/2021</time></span>
+		</section>
+	</article>
+
+	<aside>
+		<h3>Barra lateral</h3>
+		<p>Sobre o autor</p>
+	</aside>
+
+	<footer>
+		<h3>Rodapé</h3>
+		<p>&copy; 2021 - Ninguém</p>
+	</footer>
+</body>
+</html>

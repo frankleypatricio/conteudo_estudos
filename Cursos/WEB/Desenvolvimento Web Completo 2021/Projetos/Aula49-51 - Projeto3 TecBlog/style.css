@@ -1,0 +1,103 @@
+/* Limpando formatações padrões */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 1em;
+	font-family: "Trebunchet MS", Helvetica, sans-serif;
+	background-color: #f4f4f4;
+}
+
+/* Formatações gerais */
+h1{
+	color: #4e4e4e;
+	font-size: 2.5em;
+}
+h2{
+	color: #f7b600;
+}
+h3{
+	color: #565656;
+	background-color: #CCC;
+	padding: 5px;
+}
+
+/* Menu */
+a{
+	text-decoration: none;
+}
+a:link, a:visited{
+	color: #f7b600;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+#div-cabecalho a:link, #div-cabecalho a:visited{
+	color: white;
+	padding: 8px 12px;
+}
+#div-cabecalho a:hover{
+	color: #f7b600;
+	background-color: white;
+	text-decoration: none;
+}
+
+.branco{
+	color: white;
+}
+
+.data-postagem{
+	font-size: 0.8em;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #CCC;
+	display: block;
+}
+
+/* Layout */
+#div-cabecalho{
+	background-color: #f7b600;
+	padding: 15px;
+	text-align: center;
+}
+#div-logo, #div-menu{
+	padding: 10px;
+}
+
+#div-main{
+	width: 920px;
+	margin: 0 auto;
+}
+#div-postagens{
+	width: 660px;
+	float: left;
+}
+.postagem{
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: white;
+}
+#div-lateral{
+	width: 240px;
+	float: right;
+}
+#div-rodape{
+	clear: both; /* Removendo fluxo de elementos flutuantes, pra não ficar sobreposto pelos com float */
+	background-color: #CCC;
+	text-align: center;
+	padding: 15px
+}
+
+.div-conteudo-lateral{
+	background-color: white;
+	padding: 10px;
+	margin-bottom: 20px;
+
+}
+.div-postagem-lateral{
+	font-size: 0.8em;
+	padding: 5px;
+}

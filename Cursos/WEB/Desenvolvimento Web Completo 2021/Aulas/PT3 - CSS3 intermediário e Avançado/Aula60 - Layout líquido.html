@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>60. Layout líquido</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	body{
+		background-color: #f2f2f2;
+		margin: 0;
+	}
+	.container{
+		width:85%;
+		margin: 0 auto;
+		background: #fff;
+		min-width: 720px;
+	}
+	#marca{
+		height: 100px;
+		background-color: #9e9e9e;
+		text-align: center;
+		line-height: 100px;
+	}
+	#conteudo{
+		width: 75%;
+		float: right;
+	}
+	#ct-prin{
+		width: 64%;
+		float: left;
+	}
+	#ct-sec{
+		width: 34%;
+		float: right;
+		background-color: #d1d1d1;
+	}
+	#nav{
+		width: 25%;
+		float: left;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: #d1d1d1;
+	}
+	#rodape{
+		clear: both;
+		background-color: #c4c4c4;
+		padding: 5px;
+	}
+</style>
+<body>
+	<div class="container">
+		<div id="marca">Marca</div>
+		<div id="conteudo">
+			<div id="ct-prin">
+				<h2>Conteúdo de qualidade</h2>
+				<p>Vestibulum in facilisis nulla. Sed blandit magna vel ex tempor tristique. Proin molestie accumsan imperdiet. Donec malesuada sollicitudin maximus. Integer eget sapien tempus eros sagittis efficitur sed sit amet tortor. Donec accumsan lacinia aliquet.</p>
+			</div>
+			<div id="ct-sec">
+				<h2>Conteúdo secundário</h2>
+				<p>Phasellus magna risus, consequat sed erat vel, egestas semper ante. Aliquam ante eros, iaculis a sodales non, maximus quis elit.</p>
+			</div>
+		</div>
+		<div id="nav">
+			<ul>
+				<li>Home</li>
+				<li>Notícias</li>
+				<li>Em Alta</li>
+				<li>Sobre</li>
+				<li>Contato</li>
+			</ul>
+		</div>
+		<div id="rodape">Rodapé</div>
+	</div>
+</body>
+</html>

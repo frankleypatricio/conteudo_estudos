@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Float</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			color: white;
+		}
+		body{
+			background-color: #313B45;
+		}
+		.box{
+			background-color: white;
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+		.box2{
+			background-color: white;
+			margin: 10px;
+			width: 100px;
+			height: 210px;
+			float: left;
+		}
+		.clear{
+			clear: left; /*Limpa fluxo flutuante na esquerda*/
+		}
+		.main{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+
+		<div class="clear"></div> <!-- Div vazia limpando o fluxo do float, assim a div-main se expandirá para essa div aparecer (sem limpar o fluxo, a div-main não aparece) -->
+	</div>
+	
+
+	<p class="clear">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique gravida nulla, sed tincidunt nibh viverra nec. Etiam blandit velit at mi rhoncus, et interdum ligula egestas. Donec vehicula at purus in pharetra. Sed ac urna vel lorem porta tempor. Sed lacinia ex ligula, a cursus leo sollicitudin at. Proin dui diam, ultrices eget neque eu, auctor pulvinar enim. Aliquam non vehicula risus. Maecenas eu pulvinar metus, vestibulum mattis metus. Maecenas dignissim et eros in iaculis. Suspendisse lacus metus, laoreet ac risus eget, tempus malesuada elit. Maecenas dui mi, pharetra vitae vestibulum et, consectetur et ipsum. Cras id lacus metus. Phasellus molestie sagittis ipsum, vel luctus justo consequat eget. Pellentesque condimentum nulla purus, id vehicula felis pretium vel. Pellentesque commodo auctor tellus, quis porttitor nibh imperdiet a. Duis rhoncus ipsum eget odio ullamcorper, eu pharetra lorem efficitur.</p>
+</body>
+</html>

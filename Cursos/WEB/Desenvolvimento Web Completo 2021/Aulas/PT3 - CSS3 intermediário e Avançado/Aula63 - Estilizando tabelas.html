@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>63. Estilizando tabelas</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	table{
+		width: 600px;
+		/*border-collapse: collapse; Deixar bordas coladas (por padrão é separete)*/
+	}
+	th, td{
+		padding: 7px;
+	}
+	th{
+		text-transform: uppercase; /*Deixar letras em maiúsculo*/
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #111;
+		text-align: left;
+		font-size: 90%;
+		letter-spacing: 0.1em; /*Espaçamento entre letras*/
+	}
+	tr.grey{
+		background-color: #efefef;
+	}
+	tr:hover{
+		background-color: #D6FFF7;
+	}
+</style>
+<body>
+	<table>
+		<tr>
+			<th>Código</th>
+			<th>Produto</th>
+			<th>Preço</th>
+		</tr>
+		<tr class="grey">
+			<td>001</td>
+			<td>Notebook</td>
+			<td>R$ 1,200</td>
+		</tr>
+		<tr>
+			<td>002</td>
+			<td>Celular</td>
+			<td>R$ 900</td>
+		</tr>
+		<tr class="grey">
+			<td>003</td>
+			<td>Estante</td>
+			<td>R$ 2,350</td>
+		</tr>
+		<tr>
+			<td>004</td>
+			<td>PS5</td>
+			<td>1 Rim</td>
+		</tr>
+	</table>
+</body>
+</html>

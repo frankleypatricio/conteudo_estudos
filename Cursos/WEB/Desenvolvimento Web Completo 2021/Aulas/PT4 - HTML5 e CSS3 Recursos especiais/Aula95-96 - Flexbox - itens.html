@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>95-96. Flexbox - itens</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#container{
+			background: #dcdcdc;
+			height: 400px;
+			display: flex;
+		}
+		.item{
+			/*width: 100px;*/
+			height: 100px;
+			margin: 10px;
+			background: white;
+			border: 1px solid red;
+			flex-basis: 100px; /*auto é padrão. Define o tamanho inicial do flex itens antes da distribuição do espaço restante */
+		}
+		.order1{
+			order: 1; /*Padrão é 0, e se todos estão em 0, são exibidos na ordem que foi escrito*/
+		}
+		.order2{
+			order: 2;
+		}
+		.order3{
+			order: 3;
+		}
+		.order4{
+			order: 4;
+		}
+		.order-1{
+			order: -1;
+		}
+
+		.grow1{ /*Capacidade de crescimento*/
+			flex-grow: 1; /*  Padrão é 0. Faz o elemento cescer em todo espaço disponível*/
+		}
+		.shrink{ /*Capacidade de encolhimento*/
+			flex-shrink: 1;
+		}
+	</style>
+</head>
+<body>
+	<h1>FLEXBOX</h1>
+	<div id="container">
+		<div class="item order1 grow1">01</div>
+		<div class="item order3 shrink">02</div>
+		<div class="item order2">03</div>
+		<div class="item order4">04</div>
+	</div>
+</body>
+</html>

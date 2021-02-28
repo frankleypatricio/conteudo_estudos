@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>45. Posicionamento estático, relativo, absoluto e fixo</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background-color: #007fc7;
+		}
+		.cont{
+			background-color: white;
+			width: 800px;
+			margin: 10px auto; /*Usando auto, centriza a imagem porque a margem fica proporcional*/
+			padding: 10px;
+			position: relative; /* Isso pra logo (absolute) ficar posicionada relativa ao container */
+		}
+		.cont p{
+			width: 600px;
+		}
+		#relative{
+			border: 2px solid red;
+			/*position: static; - Vêm por padrão nos elementos */
+			position: relative; /* Ela é pra ser usada com outros os atributos top, bottom, right e left; */
+			left: 200px;
+		}
+		#absolute{
+			border: 2px solid red;
+			/* Absolute só é posicionado em relação container caso ele tenha uma posição definida (não padrão), se não é posicionado em relação ao body (uma posição não pardão, ou seja, não static) */
+			position: absolute;
+			top: 0px;
+			right: 20px;
+		}
+		#fixed{
+			border: 2px solid red;
+			/* Fixed deixa o elemento fixo na tela, não importa se rolar a página (posicionamento baseado no body) */
+			position: fixed;
+			bottom: 0px;
+			right: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="cont">
+		<h3 id="absolute">LOGO</h3>
+
+		<h1>Posicionamentos</h1>
+		<p>In at nibh aliquam, suscipit sem quis, sollicitudin ipsum. Nullam bibendum consectetur nulla, vel elementum massa interdum nec. Fusce sagittis luctus eros, id condimentum tortor aliquam sit amet. Suspendisse diam libero, tincidunt sit amet orci non, suscipit sagittis velit. Morbi posuere imperdiet ligula, vitae pulvinar augue pulvinar non. Maecenas et diam ut magna vehicula blandit. Praesent at tempus leo. Praesent pretium ac metus vel varius.</p>
+
+		<p id="relative">Nam cursus orci ac mattis hendrerit. Duis sagittis facilisis tincidunt. Nullam at turpis neque. Phasellus ac ultricies lorem. In gravida lacus orci, non elementum sapien tincidunt sed. Morbi quis convallis magna. Nam ut iaculis arcu. Nam et ullamcorper erat. Aenean quis erat quis lectus rutrum elementum. Sed orci ante, scelerisque fermentum sem et, maximus porttitor nunc. Vestibulum molestie, ante at faucibus consectetur, ipsum lacus tempus lacus, quis convallis purus ipsum quis turpis. In bibendum dui quam, at vulputate arcu sodales eu.</p>
+
+		<p>Phasellus vehicula laoreet diam, in lobortis ligula ornare eu. Morbi eget ante ante. Quisque elementum dui commodo venenatis bibendum. Morbi pharetra vulputate neque, quis laoreet odio cursus sed. Sed augue mi, dignissim ut ornare eget, eleifend ac est. Donec sit amet diam vestibulum, pellentesque turpis sed, rhoncus nisl. Nulla bibendum eros at diam varius tempor. Donec aliquet tempus metus, nec commodo libero congue non. Praesent quis purus at nibh egestas dictum quis ut nisi.</p>
+
+		<p>Phasellus vehicula laoreet diam, in lobortis ligula ornare eu. Morbi eget ante ante. Quisque elementum dui commodo venenatis bibendum. Morbi pharetra vulputate neque, quis laoreet odio cursus sed. Sed augue mi, dignissim ut ornare eget, eleifend ac est. Donec sit amet diam vestibulum, pellentesque turpis sed, rhoncus nisl. Nulla bibendum eros at diam varius tempor. Donec aliquet tempus metus, nec commodo libero congue non. Praesent quis purus at nibh egestas dictum quis ut nisi.</p>
+
+		<p>Phasellus vehicula laoreet diam, in lobortis ligula ornare eu. Morbi eget ante ante. Quisque elementum dui commodo venenatis bibendum. Morbi pharetra vulputate neque, quis laoreet odio cursus sed. Sed augue mi, dignissim ut ornare eget, eleifend ac est. Donec sit amet diam vestibulum, pellentesque turpis sed, rhoncus nisl. Nulla bibendum eros at diam varius tempor. Donec aliquet tempus metus, nec commodo libero congue non. Praesent quis purus at nibh egestas dictum quis ut nisi.</p>
+
+		<p>Phasellus vehicula laoreet diam, in lobortis ligula ornare eu. Morbi eget ante ante. Quisque elementum dui commodo venenatis bibendum. Morbi pharetra vulputate neque, quis laoreet odio cursus sed. Sed augue mi, dignissim ut ornare eget, eleifend ac est. Donec sit amet diam vestibulum, pellentesque turpis sed, rhoncus nisl. Nulla bibendum eros at diam varius tempor. Donec aliquet tempus metus, nec commodo libero congue non. Praesent quis purus at nibh egestas dictum quis ut nisi.</p>
+
+		<p>Phasellus vehicula laoreet diam, in lobortis ligula ornare eu. Morbi eget ante ante. Quisque elementum dui commodo venenatis bibendum. Morbi pharetra vulputate neque, quis laoreet odio cursus sed. Sed augue mi, dignissim ut ornare eget, eleifend ac est. Donec sit amet diam vestibulum, pellentesque turpis sed, rhoncus nisl. Nulla bibendum eros at diam varius tempor. Donec aliquet tempus metus, nec commodo libero congue non. Praesent quis purus at nibh egestas dictum quis ut nisi.</p>
+
+		<p>Phasellus vehicula laoreet diam, in lobortis ligula ornare eu. Morbi eget ante ante. Quisque elementum dui commodo venenatis bibendum. Morbi pharetra vulputate neque, quis laoreet odio cursus sed. Sed augue mi, dignissim ut ornare eget, eleifend ac est. Donec sit amet diam vestibulum, pellentesque turpis sed, rhoncus nisl. Nulla bibendum eros at diam varius tempor. Donec aliquet tempus metus, nec commodo libero congue non. Praesent quis purus at nibh egestas dictum quis ut nisi.</p>
+	</div>
+
+	<h5 id="fixed">MARCA D'ÁGUA</h5>
+</body>
+</html>

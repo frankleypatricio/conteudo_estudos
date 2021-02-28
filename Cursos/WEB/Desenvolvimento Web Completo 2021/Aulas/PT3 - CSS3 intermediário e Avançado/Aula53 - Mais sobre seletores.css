@@ -1,0 +1,73 @@
+*{ /* Seletor Universal */
+	margin: 0;
+}
+
+p{ /* Seletor de Texto (Elementos) */
+	color: white;
+}
+
+.class{ /* Seletor de Class */
+
+}
+
+p.class{ /* Seletor de Classe que só se aplica a tag passada */
+
+}
+
+#id{ /* Seletor de ID */
+	
+}
+
+/* Seletor de Filho que só aplica a elementos filhos do elemento passado (tem que estar dentro do elemento)
+Ex: <li>
+		<span>
+			<a href="#"></a> <-- ERRADO, POIS ELE É FILHO DO SPAN, NÃO DO UL
+		</span>
+	</li>
+	<li>
+		<a href="#"></a> <-- CERTO, PORQUE ELE É FILHO DO UL
+	</li>
+
+*/
+li>a{
+
+}
+
+li a{ /* Seletor Descentente que se aplica a qualquer elemento dentro dele */
+
+}
+.class p{ /* Seletor Descentente */
+
+}
+
+/* Seletor de Irmão Adjacente que se aplica ao próximo elemento após o elemento passado
+
+Ex: <h1>Teste</h1>
+	<p>Irmão</p> <-- CORRETO, PORQUE O P É IRMÃO PRÓXIMO DE H1
+
+	<h1>Teste</h1>
+	<div>Irmã</div>
+	<p>Irmão</p> <-- ERRADO, PORQUE O P NÃO É IRMÃO PRÓXIMO DE H1, E SIM A DIV
+*/
+h1+p{
+
+}
+
+
+/* Seletor de Irmão Geral é igual o ajdacente, porém vale pra todos os elementos após o passado (todos os irmãos)
+
+Ex: <h1>Teste</h1>
+	<p>Irmão</p> <-- CORRETO, PORQUE OS P SÃO IRMÃOS PRÓXIMO DE H1
+	<p>Irmão</p>
+
+	<h1>Teste</h1>
+	<div>
+		<p>Irmão</p> <-- ERRADO, PORQUE OS P NÃO SÃO IRMÃOS PRÓXIMO DE H1, E SIM A DIV
+		<p>Irmão</p>
+	</div>
+*/
+h1~p{
+
+}
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>93. Novas tags de Input</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div>
+			<label>Nome:
+				<input type="text" name="name" required autofocus placeholder="Digite seu nome">
+			</label>
+		</div>
+
+		<div>
+			<label>E-mail:
+				<input type="email" name="email" required placeholder="exemplo@gmail.com">
+			</label>
+		</div>
+
+		<div>
+			<label>Idade:
+				<input type="number" name="idade" min="13" max="120" step="2"required>
+			</label>
+		</div>
+
+		<div>
+			<label>Data de Nacimento:
+				<input type="date" name="nasc">
+			</label>
+		</div>
+
+		<div>
+			<label>Site:
+				<input type="url" name="site" placeholder="http://exemplo.com">
+			</label>
+		</div>
+
+		<div>
+			<label>Pesquisar:
+				<input type="search" name="pesquisar" placeholder="Digite sua pesquisa">
+			</label>
+		</div>
+
+		<div>
+			<label>Range:
+				<input type="range" name="range" min="0" max="100" value="50">
+			</label>
+		</div> 
+
+		<div>
+			<label>Cor:
+				<input type="color" name="cor">
+			</label>
+		</div>
+
+		<input type="submit" name="submit" value="Enviar">
+	</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The book is on the table</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Produtos</h1>
+
+	<table border="2" width="400">
+		<tr> <!-- Table Roll - Linha da tabela -->
+			<th>Produto</th> <!-- Tabel Header - Cabeçalho da tabela (coluna) -->
+			<th>Quantidade</th>
+			<th>Valor</th>
+		</tr>
+		<tr>
+			<td>Caneta</td> <!-- Tabel Data - Dados da tabela (coluna) -->
+			<td>200</td>
+			<td>2,00R$</td>
+		</tr>
+		<tr>
+			<td>Borracha</td>
+			<td>140</td>
+			<td>0,50R$</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Desconto</td> <!-- rowspan: Quantidade de linhas que vai ocupar (no caso 2) -->
+			<td colspan="2">10%</td> <!-- colspan: Quantidade de colunas que vai ocupar (no caso 2) -->
+		</tr>
+		<tr><td colspan="2">5%</td></tr>
+	</table>
+</body>
+</html>

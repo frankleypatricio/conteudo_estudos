@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>55. Criando barra de navegação vertical</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.header ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			background: #159cb0 url(imagens/fundo-horizontal.png) repeat-x;
+			float: left;
+		}
+		.header li{
+			float: left;
+		}
+		.header a{
+			padding: 0 2em;
+			display: block;
+			line-height: 2em;
+			text-decoration: none;
+			color: white;
+			background: url(imagens/divisor.png) repeat-y;
+		}
+		.header a:hover{
+			color: black;
+			background-color: #44cade;
+		}
+		.header li.first a{
+			background-image: none;
+		}
+
+		.menu ul{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		.menu a{
+			color: white;
+			background: #f7b600 url(imagens/menu.png) no-repeat right bottom;
+			width: 200px;
+			height: 40px;
+			display: block;
+			text-indent: 40px; /* Identa o texto (tipo um padding) */
+			line-height: 40px; /* Altera a altura da caixa do texto, por padrão é do mesmo tamanho do mesmo */
+			text-decoration: none;
+		}
+		.menu a:hover{
+			background-color: #f99200;
+			background-position: left;
+		}
+
+		.lista ul{
+			list-style-type: none; /*Tipo da lista*/
+			margin: 0;
+			padding: 0;
+		}
+		.lista li{
+			padding: 10px 20px;
+			background: url("imagens/seta.png") no-repeat left center; /* image / repeat / aligmnet / position */
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<ul>
+			<li class="first"><a href="#">Home</a></li>
+			<li><a href="#">Notícias</a></li>
+			<li><a href="#">Sobre</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</div>
+	<br><br>
+	<div class="menu">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Pesquisar</a></li>
+			<li><a href="#">Notícias</a></li>
+			<li><a href="#">Tarefas</a></li>
+		</ul>
+	</div>
+	<br><br>
+	<div class="lista">
+		<h2>Lista de Atividades</h2>
+		<ul>
+			<li>Dormir</li>
+			<li>Estudar</li>
+			<li>Lavar Louça</li>
+			<li>Estudar</li>
+			<li>Jogar</li>
+			<li>Dormir</li>
+		</ul>
+	</div>
+</body>
+</html>
