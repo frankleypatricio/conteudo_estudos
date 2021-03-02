@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Game</title>
+
+	<style>
+		canvas{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+		}
+	</style>
+
+</head>
+<body>
+
+	<script>
+		//Variaveis
+		var canvas, ctx, ALTURA, LARGURA, frames = 0, max_pulos = 3;
+
+		var chao = {
+			y: 550,
+			altura: 50,
+			cor: "#ffdf70",
+
+			desenha: function(){
+				ctx.fillStyle = this.cor;
+				ctx.fillRect(0, this.y, LARGURA, this.altura);
+			}
+		},
+
+		bloco = {
+			x: 50,
+			y: 0,
+			altura: 50,
+			largura: 50,
+			cor: "#ff4e4e",
+			gravidade: 1.5,
+			velocidade: 0,
+			forca_do_pulo: 20,
+			pulos: 0,
+
+			atualiza: function(){
+				this.velocidade += this.gravidade;
+				this.y += this.velocidade;
+
+				if(this.y > chao.y - this.altura){
+					this.y = chao.y - this.altura;
+					this.pulos = 0;
+				}
+			},
+
+			pula: function(){
+				if(this.pulos < max_pulos){
+					this.velocidade = -this.forca_do_pulo;
+					this.pulos++;
+				}
+			},
+
+			desenha: function(){
+				ctx.fillStyle = this.cor;
+				ctx.fillRect(this.x, this.y, this.largura, this.altura);
+			}
+		},
+
+		obstaculos = {
+			_obs: [],
+			_cor: ["#ffbc1c", "#ff1c1c", "#ff85e1", "#52a7ff", "#78ff5d"],
+
+			insere: function() {
+				this._obs.push({
+					x: LARGURA,
+					largura: 30 + Math.floor(20 * Math.random()),
+					altura: 30 + Math.floor(120 * math.random()),
+					cor: this.cores[Math.floor(5 * Math.random())]
+				});
+			},
+
+			atualiza: function(){
+
+			},
+
+			desenha: function(){
+				for(var i = 0, tam = this._obs.length; i < tam; i++){
+					var obs = this._obs[i];
+					ctx.fillStyle = obs.cor;
+					ctx.fillRect(obs.x, chao.y - obs.altura, obs.largura, obs.altura);
+				}
+			}
+		}
+
+		function click(event){
+			bloco.pula();
+		}
+		function main(){
+			//Verificando dimensões da janela do usuário
+			ALTURA = window.innerHeight;
+			LARGURA = window.innerWidth;
+
+			if(LARGURA >= 500){
+				LARGURA = 600;
+				ALTURA = 600;
+			}
+
+			//Criando elemento do tipo canvas
+			canvas = document.createElement("canvas");
+			canvas.width = LARGURA;
+			canvas.height = ALTURA;
+			canvas.style.border = "1px solid #000";
+
+			ctx = canvas.getContext("2d");
+
+			//Adicionando cavas no html
+			document.body.appendChild(canvas);
+
+			//Verifica se ouve um click
+			document.addEventListener("mousedown", click);
+
+			roda();
+		}
+		function roda(){
+			atualiza();
+			desenha();
+
+			window.requestAnimationFrame(roda);
+		}
+		function atualiza(){
+			frames++;
+
+			bloco.atualiza();
+		}
+		function desenha(){
+			ctx.fillStyle = "#50beff";
+			ctx.fillRect(0, 0, LARGURA, ALTURA);
+
+			chao.desenha();
+			obstaculos.desenha();
+			bloco.desenha();
+		}
+
+		//Inicializa o jogo
+		main();
+	</script>
+
+</body>
+</html>

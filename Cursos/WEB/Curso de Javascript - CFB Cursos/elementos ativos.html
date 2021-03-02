@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Event</title>
+
+	<style>
+		#dv{
+			width: 100px;
+			height: 100px;
+			border: 3px solid black;
+		}
+	</style>
+
+	<script>
+		
+		function ativo(){
+			var cx = document.getElementById("text-selected");
+			var elemento = document.activeElement;
+			var selecao = elemento.value.substring(elemento.selectionStart, elemento.selectionEnd);
+			cx.innerHTML = selecao;
+		}
+
+		window.addEventListener("load", function(){
+			var texto = document.getElementById("text-original");
+			texto.addEventListener("mouseup", ativo);
+		});
+
+	</script>
+
+</head>
+<body>
+
+	<textarea id="text-original" cols="20" rows="2">Isso aqui é só um teste</textarea><br>
+	Texto Selecionado: <span id="text-selected"></span>
+
+</body>
+</html>

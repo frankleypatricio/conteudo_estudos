@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Event</title>
+
+	<style>
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			position: absolute;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="dv"></div>
+	
+	<script>
+
+		var _x = 0;
+		var _y = 0;
+		
+		document.addEventListener("keydown", function(event){
+			var obj = document.getElementById("dv");
+			var tecla = event.keyCode;
+
+			if(tecla == 37){
+				_x -= 10;
+				obj.style.left = _x + "px";
+			}
+
+			if(tecla == 39){
+				_x += 10;
+				obj.style.left = _x + "px";
+			}
+
+			if(tecla == 38){
+				_y -= 10;
+				obj.style.top = _y + "px";
+			}
+
+			if(tecla == 40){
+				_y += 10;
+				obj.style.top = _y + "px";
+			}
+		});
+
+	</script>
+
+</body>
+</html>

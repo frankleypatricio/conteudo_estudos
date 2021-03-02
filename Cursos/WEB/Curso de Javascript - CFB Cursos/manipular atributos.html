@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style>
+
+		#cube{
+			width: 50px;
+			height: 50px;
+		}
+
+		.c1{
+			background-color: blue;
+		}
+		.c2{
+			background-color: red;
+		}
+		.c3{
+			background-color: green;
+		}
+
+	</style>
+
+	<script>
+
+		var obj, color_seted;
+
+		window.addEventListener("load", function(){
+			obj = document.getElementById("cube");
+		});
+		
+		function changeColor(c){
+
+			obj.removeAttribute("class", "c"+color_seted);
+
+			color_seted = c;
+
+			obj.setAttribute("class", "c"+c);
+			
+			/*if(c == 1){
+				obj.setAttribute("class", "c1");
+			}else if(c == 2){
+				obj.setAttribute("class", "c2");
+			}else if(c == 2){
+				obj.setAttribute("class", "c3");
+			}*/
+		}
+
+		function clearColor(){
+			obj.removeAttribute("class");
+		}
+
+		function verificar(){
+			var tipo = prompt("Tipo do atributo:");
+			var nome = prompt("Nome do atributo:");
+
+			if(obj.hasAttribute(tipo, nome)){
+				alert("Atributo encontrado");
+			}else{
+				alert("Atributo não encontrado")
+			}
+		}
+		
+	</script>
+
+</head>
+<body>
+
+	<div id="cube"></div>
+	
+	<button onclick="changeColor(1)">Azul</button>
+	<button onclick="changeColor(2)">Vermelho</button>
+	<button onclick="changeColor(3)">Verde</button>
+	<button onclick="clearColor()">Limpar</button>
+	<button onclick="verificar()">Verificar</button>
+
+</body>
+</html>

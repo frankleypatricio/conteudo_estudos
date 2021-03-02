@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jogo da Velha</title>
+
+	<style>
+		
+		body{
+			margin: 0px;
+			background-color: #aaa;
+		}
+		#div-painel{
+			display: flex;
+			height: 50px;
+			align-items: center;
+		}
+		.item-painel{
+			margin: 5px;
+		}
+		#div-jogo{
+			width: 960px;
+			height: 500px;
+			border: 1px solid #000;
+			background-color: #000;
+		}
+		#div-bola{
+			position: absolute;
+			top: 240px;
+			left: 475px;
+			width: 20px;
+			height: 20px;
+			background-color: #888;
+		}
+		.barra{
+			position: absolute;
+			width: 20px;
+			height: 140px;
+			background-color: #888;
+			top: 180px;
+		}
+		.barra{
+			position: absolute;
+			width: 20px;
+			height: 140px;
+			background-color: #888;
+			top: 180px;
+		}
+		.esquerda{
+			left: 10px;
+		}
+		.direita{
+			left: 930px;
+		}
+
+	</style>
+
+	<script>
+
+		//Elementos
+		var iniciar, bola, cpu, jogador, painel_pontos;
+
+		//Controle de animação
+		var game, frames;
+
+		//Posições
+		var x_bola, y_bola, x_jogador, y_jogador, x_cpu, y_cpu;
+
+		//Direções de acordo com a tecla
+		var direcao;
+
+		//Posições iniciais
+		var start_y_jogador = 180, start_y_cpu = 180, start_x_jogador = 10, start_x_cpu = 930;
+		var start_x_bola = 475, start_y_bola = 240;
+
+		//Tamanhos
+		var x_campo = 0, y_campo = 0, w_campo = 960, h_campo = 500, w_barra = 20, h_barra = 140, w_bola = 20, h_bola = 20;
+
+		//Direção
+		var bola_x, bola_y, cpu_y = 0;
+
+		//Velocidade
+		var vel_bola, vel_cpu, vel_jogador;
+
+		//Controle
+		var pontos = 0, tecla, jogo = false;
+
+		document.addEventListener("keyup", function(){
+			tecla = event.keyCode;
+
+			if(tecla == 38){ //Cima
+				direcao = 0;
+			}else if(tecla == 40){ //Baixo
+				direcao = 0;
+			}
+
+		});
+
+		document.addEventListener("keydown", function(){
+			tecla = event.keyCode;
+
+			if(tecla == 38){ //Cima
+				direcao = -1;
+			}else if(tecla == 40){ //Baixo
+				direcao = 1;
+			}
+		});
+
+		function cpuControl(){
+			if(jogo){
+				if(x_bola > (w_campo/2) && bola_x > 0){ //Bola indo para a direita >>
+					if(y_bola+(h_bola/2) > (y_cpu+(h_barra/2))+vel_cpu){
+						//Mover CPU pra baixo
+						if(y_cpu+h_barra <= h_campo){
+							y_cpu += vel_cpu;
+						}
+					}else if(y_bola+(h_bola/2) < (y_cpu+(h_barra/2))-vel_cpu){
+						//Mover CPU pra cima
+						if(y_cpu >= 0){
+							y_cpu -= vel_cpu;
+						}
+					}
+				}else{
+					//Centralizar CPU
+					if(y_cpu+(h_barra/2) < h_campo/2){
+						cpu_y += vel_cpu;
+					}else if(y_cpu+(h_barra/2) > h_campo/2){
+						cpu_y -= vel_cpu;
+					}
+				}
+				cpu.style.top = y_cpu+"px";
+			}
+		}
+
+		function bolaControl(){
+			//Movimentação
+			x_bola += vel_bola * bola_x;
+			y_bola += vel_bola * bola_y;
+
+			//Colisão com jogador
+			if(x_bola <= x_jogador+w_barra && y_bola+h_bola >= y_jogador && y_bola <= y_jogador+h_barra){
+				bola_y = ((y_bola + (h_bola / 2)) - (y_jogador + (h_barra / 2))) / 32;
+				bola_x *= -1;
+			}
+
+			//Colisão com cpu
+			if(x_bola >= x_cpu-w_barra && y_bola+h_bola >= y_cpu && y_bola <= y_cpu+h_barra){
+				bola_y = ((y_bola + (h_bola / 2)) - (y_cpu + (h_barra / 2))) / 32;
+				bola_x *= -1;
+			}
+
+			//Colisão com os limites do campo
+			if(y_bola >= 400 || y_bola <= 0){
+				bola_y *= -1;
+			}
+
+			//Marcou ponto
+			if(x_bola >= w_campo-h_bola){
+				vel_bola = 0;
+				x_bola = start_x_bola;
+				y_bola = start_y_bola;
+				y_jogador = start_y_jogador;
+				jogador.style.top = y_jogador+"px";
+				y_cpu = start_y_cpu;
+				cpu.style.top = y_cpu+"px";
+				pontos++;
+				painel_pontos.value = pontos;
+				jogo = false;
+				iniciar.removeAttribute("disabled");
+			}else if(x_bola <= 0){
+				vel_bola = 0;
+				x_bola = start_x_bola;
+				y_bola = start_y_bola;
+				y_jogador = start_y_jogador;
+				jogador.style.top = y_jogador+"px";
+				y_cpu = start_y_cpu;
+				cpu.style.top = y_cpu+"px";
+				pontos--;
+				painel_pontos.value = pontos;
+				jogo = false;
+				iniciar.removeAttribute("disabled");
+			}
+
+
+			bola.style.top = y_bola+"px";
+			bola.style.left = x_bola+"px";
+		}
+
+		function playerControl(){
+			if(jogo){
+				y_jogador += vel_jogador * direcao;
+				if((y_jogador + h_barra) >= h_campo || y_jogador <= 0){
+					y_jogador += (vel_jogador * direcao) * (-1);
+				}
+				jogador.style.top = y_jogador+"px";
+			}
+		}
+
+		function gameControl(){
+			if(jogo){
+				playerControl();
+				bolaControl();
+				cpuControl();
+			}
+			frames = requestAnimationFrame(gameControl);
+		}
+
+		function gameStart(){
+			if(!jogo){
+				cancelAnimationFrame(frames);
+				iniciar.setAttribute("disabled", "");
+				vel_bola = vel_cpu = vel_jogador = 8; //Passando o mesmo valor para todas as variáveis de uma só vez
+				jogo = true;
+				direcao = 0;
+				x_bola = start_x_bola;
+				y_bola = start_y_bola;
+				y_jogador = start_y_jogador;
+				x_jogador = start_x_jogador;
+				y_cpu = start_y_cpu;
+				x_cpu = start_x_cpu;
+				bola_y = 0;
+				if((Math.random()*10)<5){
+					bola_x = -1;
+				}else{
+					bola_x = 1;
+				}
+				gameControl();
+			}
+		}
+
+		function main(){
+			iniciar = document.getElementById("btn-iniciar");
+			iniciar.addEventListener("click", gameStart);
+			jogador = document.getElementById("div-jogador");
+			cpu = document.getElementById("div-cpu");
+			bola = document.getElementById("div-bola");
+			painel_pontos = document.getElementById("txt-pontos");
+		}
+
+		window.addEventListener("load", main);
+
+	</script>
+
+</head>
+<body>
+	
+	<div id="div-jogo">
+		<div id="div-bola"></div>
+		<div id="div-jogador" class="barra esquerda"></div> <!-- Separados por espaço, pode se declarar mais de uma classe -->
+		<div id="div-cpu" class="barra direita"></div>
+	</div>
+	<div id="div-painel">
+		<div class="item-painel">
+			<label>Pontos</label>
+			<input type="text" id="txt-pontos" value="0" size="10" />
+		</div>
+		<div class="item-painel">
+			<button id="btn-iniciar">Iniciar</button>
+		</div>
+	</div>
+	
+</body>
+</html>
