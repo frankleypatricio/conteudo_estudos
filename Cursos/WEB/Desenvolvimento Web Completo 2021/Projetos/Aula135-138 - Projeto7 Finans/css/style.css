@@ -1,0 +1,23 @@
+#home{
+	background: #ffc107;
+	color: white;
+}
+
+#entrar{
+	margin-left: 1.5rem;
+}
+@media (max-width: 575.98px){
+	#entrar{
+		margin-left: 0;
+		margin-top: 0.5em;
+	}
+}
+
+.caixa{
+	padding: 60px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+footer p a{
+	margin: 5px 15px;
+}

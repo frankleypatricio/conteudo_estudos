@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de Grid</title>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style type="text/css">
+    	*{
+    		color: white;
+    	}
+    	.marcador1{
+    		background: red;
+    		border: 1px solid #f94646;
+    	}
+    	.marcador2{
+    		background: green;
+    		border: 1px solid #f94646;
+    	}
+    	.marcador3{
+    		background: blue;
+    		border: 1px solid #f94646;
+    	}
+    	.marcador{
+    		background: #FF9B9D;
+    		border: 1px solid #f94646;
+    	}
+    	.marcador p{
+    		color: black;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<!-- Uso de grid para definir o espaço ocupado em uma divisão de 12 colunas -->
+		<div class="row">
+			<div class="marcador1 col-6 col-sm-2 col-md-8 col-lg-1 col-xl-4">
+				Área 1
+			</div>
+			<div class="marcador2 col-3 col-sm-5 col-md-2 col-lg-10 col-xl-4">
+				Área 2
+			</div>
+			<div class="marcador3 col-3 col-sm-5 col-md-2 col-lg-1 col-xl-4">
+				Área 3
+			</div>
+		</div>
+
+		<br><br>
+
+		<!-- Ao ficar em telas menores que md, como não foi definido o grid, ele coloca uma coluna abaixo da outra pra facilitar a visualização -->
+		<div class="row">
+			<div class="marcador col-md-6 col-lg-4">
+				<h3>Lorem Y</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin nisi vitae nunc fringilla, sit amet viverra neque iaculis. Praesent pellentesque tincidunt dolor, sed interdum sapien vulputate bibendum. Nunc in metus eget lacus tincidunt molestie quis eget orci. Aliquam gravida arcu nec eros rutrum mollis.</p>
+				<button class="btn btn-warning">Leia mais</button>
+			</div>
+			<div class="marcador col-md-6 col-lg-4">
+				<h3>Lorem ipsum</h3>
+				<p>Morbi sed sodales ex. Cras a finibus odio, a ullamcorper odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sollicitudin malesuada dignissim. Cras lacinia porttitor libero vitae tempus.</p>
+				<button class="btn btn-warning">Leia mais</button>
+			</div>
+			<div class="marcador col-md-6 col-lg-4">
+				<h3>Lorem ipsulom</h3>
+				<p>Consectetur adipiscing elit. Sit amet viverra neque iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sollicitudin malesuada dignissim. Cras lacinia porttitor libero vitae tempus.</p>
+				<button class="btn btn-warning">Leia mais</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
