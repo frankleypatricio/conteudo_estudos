@@ -1,0 +1,49 @@
+/*
+*
+*
+*/
+
+/* Layout
+*********************************************/
+html, body, main{
+	height: 100%;
+}
+.col-6 img{
+	width: 500px;
+}
+/* Nav
+*********************************************/
+button.navbar-toggler{
+	border: 2px solid white;
+	color: white;
+	transition: color .5s, background-color .5s;
+	-webkit-transition: color .5s, background-color .5s;
+	-moz-transition: color .5s, background-color .5s;
+	-o-transition: color .5s, background-color .5s;
+}
+button.navbar-toggler:hover{
+	background-color: white;
+	color: black;
+}
+
+#nav-main .navbar-nav .nav-item a.nav-link{
+	color: white;
+	padding-bottom: 0;
+}
+#nav-main .navbar-nav .nav-item a.nav-link:hover{
+	border-bottom: 2px solid white;
+}
+
+#nav-main .navbar-nav .nav-item a.btn-custom{
+	border: 2px solid white;
+	padding: .5em .9em;
+	margin-left: 1em;
+	transition: color .5s, background-color .5s;
+	-webkit-transition: color .5s, background-color .5s;
+	-moz-transition: color .5s, background-color .5s;
+	-o-transition: color .5s, background-color .5s;
+}
+#nav-main .navbar-nav .nav-item a.btn-custom:hover{
+	background-color: white;
+	color: black;
+}
