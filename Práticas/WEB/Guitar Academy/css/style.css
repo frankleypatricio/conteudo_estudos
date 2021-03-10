@@ -1,6 +1,6 @@
 /*
 *
-*
+* @ author Jamilton Damasceno
 */
 
 /* Layout
@@ -8,11 +8,18 @@
 html, body, main{
 	height: 100%;
 }
-.col-6 img{
-	width: 500px;
+body{
+	font-family: Arial, sans-serif;
 }
+input, button{
+	outline: none;
+}
+
 /* Nav
 *********************************************/
+nav{
+	background: rgba(1, 32, 43, 0.7);
+}
 button.navbar-toggler{
 	border: 2px solid white;
 	color: white;
@@ -46,4 +53,248 @@ button.navbar-toggler:hover{
 #nav-main .navbar-nav .nav-item a.btn-custom:hover{
 	background-color: white;
 	color: black;
+}
+
+/* Main
+*********************************************/
+#home{
+	background: linear-gradient(50deg, #02a5d4, #04688d);
+}
+#home p{
+	margin-top: 1em;
+}
+
+#phrase{
+	background: url(../img/guitar1.jpg), black;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+#aspas{
+	background: url(../img/aspas.png) left top no-repeat;
+	padding-top: .6em;
+}
+#phrase h1{
+	padding-left: 2.3em;
+}
+#phrase p{
+	float: right;
+	margin-right: 10em;
+}
+
+#info{
+	background: linear-gradient(50deg, #02a5d4, #04688d);
+	padding: 4.2em 0;
+}
+#info .img-info{
+	margin-left: 1.7em;
+}
+
+#sign-up{
+	height: 100%;
+	background: url(../img/guitar-woman.jpg) right no-repeat fixed;
+	-webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+	background-size: 100%;
+}
+#sign-up .img-sign-up{
+	float: right;
+	height: 100%;
+}
+#sign-up h3{
+	color: #2f9ad2;
+	font-weight: bold;
+}
+#sign-up .input-custom{
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+}
+#sign-up .input-custom::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #C6C6C6;
+}
+
+#sign-up .input-custom::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #C6C6C6;
+}
+
+#sign-up .input-custom::-ms-input-placeholder { /* Microsoft Edge */
+  color: #C6C6C6;
+}
+#sign-up .btn-custom-white{
+	background: white;
+	font-weight: bold;
+}
+#sign-up .btn-custom-white:hover{
+	background: transparent;
+	border: 1px solid white;
+	color: white;
+}
+#sign-up .checkbox-custom{
+	color: white;
+	float: left;
+	display: flex;
+	justify-content: center;
+}
+#sign-up .checkbox-custom:hover{
+	color: #2f9ad2;
+}
+#sign-up .checkbox-custom input.checkbox{
+	width: 20px;
+	height: 20px;
+	margin-right: 6px;
+}
+
+
+.mt-custom-5{
+	margin-top: 5.5em;
+}
+.margin-none{
+	margin: 0;
+}
+.flex-box-center{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Rodapé
+*********************************************/
+footer{
+	background: #181818;
+	padding: 30px 0;
+	position: fixed bottom;
+	clear: both;
+}
+
+footer ul.navbar-footer{
+	list-style: none;
+}
+footer ul.navbar-footer li{
+	display: inline;
+	margin: 0 8px;
+}
+footer ul.navbar-footer li i{
+	color: #2f9ad2;
+	font-size: 2em;
+}
+
+/* Tipografia
+*********************************************/
+h1, h2, h3, p{
+	color: white;
+}
+h5{
+	color: #C6C6C6;
+}
+
+/* Media Query
+*********************************************/
+/* Extra Small devices == telefones menores */
+@media (max-width: 575.98px) {
+	#nav-main .navbar-nav .nav-item a.btn-custom{
+		width: 76.36px;
+		margin-left: 0;
+		margin-top: 1em;
+	}
+	#nav-main .navbar-nav .nav-item a.nav-a{
+		display: inline-block;
+	}
+	h2{
+    	font-size: 1.5em;
+    }
+    #home{
+    	padding: 142px 0;
+    }
+    #phrase h1{
+    	font-size: 1.4em;
+    	-webkit-background-size: 41px 32px;
+    	-moz-background-size: 41px 32px;
+    	-o-background-size: 41px 32px;
+    	background-size: 41px 32px;
+    }
+    #phrase p{
+    	margin-right: 2em;
+    }
+    #info .img-info{
+		margin-left: 6em;
+	}
+	#sign-up{
+		-webkit-background-size: 200%;
+	    -moz-background-size: 200%;
+	    -o-background-size: 200%;
+		background-size: 200%;
+	}
+}
+
+/* Small devices == telefones */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	#nav-main .navbar-nav .nav-item a.btn-custom{
+		width: 76.36px;
+		margin-left: 0;
+		margin-top: 1em;
+	}
+	#nav-main .navbar-nav .nav-item a.nav-a{
+		display: inline-block;
+	}
+    h2{
+    	font-size: 1.5em;
+    }
+    #home{
+    	padding: 146px 0;
+    }
+    #phrase h1{
+    	font-size: 1.6em;
+    	-webkit-background-size: 49px 39px;
+    	-moz-background-size: 49px 39px;
+    	-o-background-size: 49px 39px;
+    	background-size: 49px 39px;
+    }
+    #info .img-info{
+		margin-left: 8em;
+	}
+	#info p{
+		margin-bottom: 50px;
+	}
+	#sign-up{
+		-webkit-background-size: 180%;
+	    -moz-background-size: 180%;
+	    -o-background-size: 180%;
+		background-size: 180%;
+	}
+}
+
+/* Medium devices == tablets*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    h2{
+    	font-size: 1.5em;
+    }
+    #phrase h1{
+    	font-size: 2em;
+    	-webkit-background-size: 57px 46px;
+    	-moz-background-size: 57px 46px;
+    	-o-background-size: 57px 46px;
+    	background-size: 57px 46px;
+    }
+    #info .img-info{
+		margin-left: 0;
+	}
+	#sign-up{
+		-webkit-background-size: 150%;
+	    -moz-background-size: 150%;
+	    -o-background-size: 150%;
+		background-size: 150%;
+	}
+}
+
+/* Large devices == desktops*/
+@media (min-width: 992px) and (max-width: 1999.98px) {
+	
+}
+
+/* Extra Large devices == desktops grandes*/
+@media (min-width: 1200px) {
+    
 }

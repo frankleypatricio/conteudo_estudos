@@ -2,6 +2,7 @@
 ---------------------------------*/
 html, body, main, #home{
 	height: 100%;
+	overflow-x: hidden; /* Esconder barra de rolagem horizontal */
 }
 body{
 	background: url(../img/capa.png), /* Múltiplos backgrounds sobrepostos */
@@ -59,6 +60,75 @@ nav.navbar-transparente{
 	color: black;
 }
 
+/* Conteúdo
+---------------------------------*/
+.caixa{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#servicos{
+	background: white;
+}
+#servicos h2,h3{
+	color: #7c25f8;
+}
+
+#recursos{
+	color: white;
+}
+#recursos{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#recursos h2{
+	color: white;
+}
+#recursos h3{
+	color: #9bf0e1;
+}
+
+.albuns{
+	padding: 10px 0;
+}
+.rotacionar{
+	-webkit-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg);
+	padding-left: 80px;
+	pad
+}
+
+/* Rodapé
+---------------------------------*/
+footer{
+	background: black;
+	padding: 50px 0 20px 0;
+	position: relative;
+}
+footer h4{
+	color: #919496;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+footer .navbar-nv a{
+	color: white;
+	font-size: 0.8em;
+}
+footer .navbar-nv a:hover{
+	color: #9bf0e1;
+	text-decoration: none;
+}
+footer ul{
+	list-style: none;
+}
+footer li{
+	float: right;
+	margin: 0 5px;
+}
+
+
+
 /* Tipografia
 ---------------------------------*/
 h1{
@@ -67,7 +137,19 @@ h1{
 	margin-bottom: 50px;
 	color: white;
 }
+h2{
+	font-size: 3em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+h3{
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
 
+/* Media Query
+---------------------------------*/
 /* Extra Small devices == telefones menores */
 @media (max-width: 575.98px) {
 	.btn-custom{
