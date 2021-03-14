@@ -165,7 +165,6 @@ button.navbar-toggler:hover{
 footer{
 	background: #181818;
 	padding: 30px 0;
-	position: fixed bottom;
 	clear: both;
 }
 
@@ -189,6 +188,12 @@ h1, h2, h3, p{
 h5{
 	color: #C6C6C6;
 }
+
+/*********************************************
+LEMBRAR DE REMOVER O AND DOS @media QUE NÃO
+SÃO NECESSÁRIOS, PARA NÃO PRECISAR REPEDITR
+CÓDIGOS NOS DEVICES MAIORES
+*********************************************/
 
 /* Media Query
 *********************************************/
@@ -227,6 +232,21 @@ h5{
 	    -o-background-size: 200%;
 		background-size: 200%;
 	}
+	footer ul.navbar-nav, footer #footer-copyright, footer img{
+		margin-bottom: 1em;
+	}
+	footer #nav-footer, footer h5{
+		padding-left: 5em;
+	}
+	footer img{
+		width: 70%;
+	}
+	footer ul.navbar-nav{
+		flex-direction: row;
+	}
+	footer ul.navbar-nav li{
+		margin: 0 4px;
+	}
 }
 
 /* Small devices == telefones */
@@ -263,6 +283,24 @@ h5{
 	    -moz-background-size: 180%;
 	    -o-background-size: 180%;
 		background-size: 180%;
+	}
+	footer ul.navbar-nav, footer #footer-copyright, footer img{
+		margin-bottom: 1em;
+	}
+	footer #nav-footer{
+		padding-left: 7.5em;
+	}
+	footer h5{
+		padding-left: 5.5em;
+	}
+	footer img{
+		width: 70%;
+	}
+	footer ul.navbar-nav{
+		flex-direction: row;
+	}
+	footer ul.navbar-nav li{
+		margin: 0 4px;
 	}
 }
 
