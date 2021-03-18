@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>180. Funções nativas para manipular strings</title>
+
+	<script type="text/javascript">
+		var text = "Funções nativas"
+
+		document.write("<p><strong> Original: </strong>"+text+"</p><hr>")
+
+		document.write("<p><strong> Tamanho da string: </strong>"+text.length+"</p>")
+		document.write("<p><strong> Caracter contido índice 3: </strong>"+text.charAt(3)+"</p>")
+		document.write("<p><strong> Índice da primeira ocorrência de 'n': </strong>"+text.indexOf("n")+"</p>")
+		document.write("<p><strong> Índice da última ocorrência de 'n': </strong>"+text.lastIndexOf("n")+"</p>")
+		document.write("<p><strong> Substitui valores em uma string: </strong>"+text.replace("Funções", "Métodos")+"</p>")
+		document.write("<p><strong> Retorna os valores da string no intervalo (index) passados: </strong>"+text.substr(8,14)+"</p>")
+		document.write("<p><strong> Transforma a string em minúsculo: </strong>"+text.toLowerCase()+"</p>")
+		document.write("<p><strong> Transforma a string em maiúsculo: </strong>"+text.toUpperCase()+"</p>")
+
+		text = " Funções nativas "
+		document.write("<p><strong> Com espaços: </strong> -"+text+"-</p>")
+		document.write("<p><strong> Remove espaços das extremidas: </strong>-"+text.trim()+"-</p>")
+	</script>
+</head>
+<body>
+
+</body>
+</html>

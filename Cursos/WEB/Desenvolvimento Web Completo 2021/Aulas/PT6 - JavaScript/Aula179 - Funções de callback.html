@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>179. Funções de callback</title>
+
+	<script type="text/javascript">
+		function exibirArtigo(id, callbackSuccess, callbackError){
+			if(id == 1){
+				callbackSuccess("Funções de callback em js", "Funções de callback são muito utilizadas...")
+			}else{
+				callbackError("Erro ao recuperar os dados")
+			}
+		}
+
+		var callbackSuccess = function(titulo, descricao){
+			document.write("<h3>"+titulo+"</h3>")
+			document.write("<hr>")
+			document.write("<p>"+descricao+"</p>")
+		}
+
+		var callbackError = function(erro){
+			document.write("<p><strong>Error: </strong>"+erro+"</p>")
+		}
+
+		exibirArtigo(prompt("Digite 1 para true e outro número para false: "), callbackSuccess, callbackError)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

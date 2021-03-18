@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>177. Escopo de variáveis</title>
+
+	<script type="text/javascript">
+		var serie1 = "Doctor Who" //Escopo global
+
+
+		document.write("<p><h3>"+serie1+"</h3></p><br>")
+		if(true){
+			var serie2 = "Mr. Robot" //Escopo de bloco elevado(hoisting), funciona no escopo global
+
+			document.write("<p><h3>"+serie1+"</h3></p>")
+			document.write("<p><h3>"+serie2+"</h3></p><br>")
+		}
+
+		function bar(){
+			var serie3 = "The Boys" //Escopo local da função
+
+			document.write("<p><h3>"+serie1+"</h3></p>") //Não será impresso
+			document.write("<p><h3>"+serie2+"</h3></p>") //Não será impresso
+			document.write("<p><h3>"+serie3+"</h3></p><br>") //Será impresso
+		}
+
+		document.write("<p><h3><em>"+serie1+"</em></h3></p>") //Será impresso
+		document.write("<p><h3><em>"+serie2+"</em></h3></p>") //Será impresso
+		document.write("<h3><em>"+serie3+"</em></h3>")     //Não será impresso
+	</script>
+</head>
+<body>
+
+</body>
+</html>
