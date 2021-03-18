@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>183. Praticando um pouco mais com datas</title>
+
+	<script type="text/javascript">
+		var date = new Date()
+
+		// adicionar / remover dias
+		document.write(date.toString())
+		date.setDate(date.getDate() + 720) //Incluindo dias na data
+		document.write("<hr>")
+		document.write(date.toString())
+
+		// adicionar / remover meses
+		date.setMonth(date.getMonth() - 3) //Removendo meses na data
+		document.write("<hr>")
+		document.write(date.toString())
+
+		// adicionar / remover anos
+		date.setFullYear(date.getFullYear() + 7) //Incluindo anos na data
+		document.write("<hr>")
+		document.write(date.toString())
+		document.write("<br><br><br><br>")
+
+		//Nova data personalizada
+		var data1 = new Date(2017, 0 ,15)
+		var data2 = new Date(2017, 1 ,23)
+		document.write(data1.toString()+"<hr>"+data2.toString())
+
+		//Converter datas em milisegundos para fazer calculos
+		document.write("<hr>"+data1.getTime()+"<hr>"+data2.getTime()+"<hr>")
+
+		//Calcular a quantidade de milisegundos entre datas
+		var milisegundos_datas = Math.abs(data1.getTime() - data2.getTime())
+		document.write(milisegundos_datas)
+
+		//Calculando...
+		var milisegundos_dia = (1*24*60*60*1000)
+		document.write("<hr>1 dia tem: " + milisegundos_dia + " milisegundos<hr>")
+		document.write("Diferença de dias entre as datas: "+Math.ceil(milisegundos_datas / milisegundos_dia)+" dias")
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
