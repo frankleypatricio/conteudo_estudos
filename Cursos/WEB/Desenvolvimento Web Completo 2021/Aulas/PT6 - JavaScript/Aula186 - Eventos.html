@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>186. Eventos</title>
+
+	<script>
+		function double(){
+			alert('Double Clicked!')
+		}
+		function release(){
+			alert('Released!')
+		}
+	</script>
+</head>
+<body>
+	<!-- Adicionando eventos direto no elemento -->
+	<!-- Obs: Nem todos os eventos funcionam em todos os elementos, consultar documentação para saber -->
+	<button onclick="alert('Clicked!')">Click</button>
+	<button ondblclick="double()">Double click</button>
+	<button onmouseup="release()">Release</button>
+	<button onmouseover="alert('Over!')">Over</button>
+	<button onmouseout="alert('Out!')">Out</button>
+
+	<button onmouseover="alert('Over!')" onmouseout="alert('Out!')">Over and Out</button>
+</body>
+</html>
