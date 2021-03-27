@@ -61,7 +61,8 @@ def select(sql):
         with connect() as con:
             c=con.cursor()
             c.execute(sql)
-            return c.fetchall() # Retornando resultados do select
+            res=c.fetchall() # Retornando resultados do select
+            return res
     except Error as ex:
         print(ex)
 
