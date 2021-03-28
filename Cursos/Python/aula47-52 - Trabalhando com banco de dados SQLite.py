@@ -98,8 +98,10 @@ while(not done):
         res=select(_select)
         print(type(res))
         for r in res:
-            print(type(r))
-            print(r)
+            print(f"T: {type(r[0])} / V: {r[0]}")
+            print(f"T: {type(r[1])} / V: {r[1]}")
+            print(f"T: {type(r[2])} / V: {r[2]}")
+            print(f"T: {type(r[3])} / V: {r[3]}")
     else: # Exit
         done=True
 
