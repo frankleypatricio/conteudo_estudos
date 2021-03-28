@@ -1,0 +1,15 @@
+Vou tirar a dúvida dos operadores &&, &, || e |.
+
+A diferença entre os operadores lógicos que usam um símbolo e dois símbolos é que quando se usa dois é o que se conhece por operadores lógicos de curto circuito.
+O operador lógico de curto circuito executa o mínimo de código possível afim de processar a operação lógica, ou seja, se você estiver fazendo uma comparação do tipo if(false && true) ao processar esse trecho e descobrir que logo o primeiro resultado é falso ele nem chega a analisar a segunda parte da lógica, então tanto faz se a segunda parte é true ou false, pois false && qualquerCoisa sempre dá false.
+No geral, sempre se usa os comparadores lógicos de curto circuito, pois eles nunca serão mais lentos que os operadores lógicos de não-curto circuito. Entretanto é necessário ficar atento a situações excepcionais onde a execução ou não do restante dos operadores pode alterar o fluxo do programa e gerar um resultado não esperado, como por exemplo:
+
+int a = 5; if(++a > 5 || ++a > 6) a++; System.out.println(a); //a==7
+
+Contra:
+
+int b = 5; if(++b > 5 | ++b > 6) b++; System.out.println(b); //b==8
+
+Exemplo
+No primeiro caso, por ser um curto circuito ele faz o primeiro ++a, verifica que é maior que 5 e não continua a executar o código depois do ||, pois true OU qualquerCoisa é true. Como deu if(true) ele entra no if e faz a++, tornando-o 7.
+No segundo caso, por não estar utilizando operadores de curto circuito ele processa tudo que está dentro do if, logo ele faz ++b duas vezes, resultando em if(true|true) que é a mesma coisa que if(true), ele entra no código dentro do if e faz b++ tornando-o 8.
