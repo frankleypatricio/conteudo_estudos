@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>191-194. DOM</title>
+	<style type="text/css">
+		.estilo1{
+			background: #ff0000;
+			color: white;
+		}
+		.estilo2{
+			width: 400px;
+			height: 50px;
+			background: #ff0000;
+			color: white;
+			text-align: center;
+			font-size: 25px;
+			padding: 25px;
+		}
+	</style>
+</head>
+<body>
+	<!-- //191. DOM - Selecionando elementos da página -->
+	<input id="nome" class="campo" type="text" name="nome" placeholder="Digite seu nome">
+	<script>
+		console.log("ByID")
+		console.log(document.getElementById("nome"))
+		console.log("ByTagName")
+		console.log(document.getElementsByTagName("input"))
+		console.log("ByClassName")
+		console.log(document.getElementsByClassName("campo"))
+		console.log("ByName")
+		console.log(document.getElementsByName("nome"))
+	</script>
+	<br><hr><br>
+	<!-- //192. DOM parte 3 - Manipulando valores de inputs(text) -->
+	<input id="entrada" type="text" placeholder="Digite um caracter..." onkeyup="distribuirCaracter()"><hr>
+
+	<span>Letras:</span>
+	<input type="text" disabled id="letra">
+	<span>Números:</span>
+	<input type="text" disabled id="num">
+
+	<script>
+		function distribuirCaracter(){
+			var char=document.getElementById('entrada').value
+			console.log(char.value)
+
+			document.getElementById('entrada').value='' //Limpando campo
+
+			char.trim() //Removendo espaços das extremidades
+
+			switch(char){
+				case '0':
+				case '1':
+				case '2':
+				case '3':
+				case '4':
+				case '5':
+				case '6':
+				case '7':
+				case '8':
+				case '9':
+					document.getElementById('num').value+=char
+					break;
+				default:
+					document.getElementById('letra').value+=char
+			}
+		}
+	</script>
+	<br><hr><br>
+
+	<!-- 193. DOM parte 4 - Manipulando estilos de elementos -->
+	<button onclick="colorir('#ff0000')">Vermelho</button>
+	<button onclick="colorir('#00ff00')">Verde</button>
+	<button onclick="colorir('#0000ff')">Azul</button>
+	<p><div id="box" style="width: 100px; height: 100px; border: 2px solid black;"></div></p>
+	<script>
+		function colorir(cor){
+			document.getElementById("box").style.backgroundColor=cor
+		}
+	</script>
+	<br><hr><br>
+
+	<!-- 194. DOM parte 5 - Manipulando classes de elementos -->
+	<div id="msg" class="estilo1">Modificando a classe do elemento</div>
+	<p><button onclick="modificar()">Aplicar classe</button></p>
+	<script>
+		function modificar(){
+			document.getElementById("msg").className='estilo2' //Atribuindo classe
+		}
+	</script>
+</body>
+</html>
