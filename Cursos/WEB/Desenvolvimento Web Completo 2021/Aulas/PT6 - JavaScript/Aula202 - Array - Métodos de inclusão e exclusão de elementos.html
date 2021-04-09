@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>202-203. Métodos do Array</title>
+		<style type="text/css">
+			body{
+				background-color: #313947;
+				color: white;
+			}
+		</style>
+
+		<script>
+			/* 202. Array - Métodos de inclusão e exclusão de elementos */
+			var frutas = Array()
+			frutas[0] = 'Banana'
+			frutas[1] = 'Maçã'
+			console.log(frutas)
+
+			frutas.push('Uva') // Inclui no final do array
+			frutas.unshift('Morango') // Inclui no inicio do array (os índices são reajustados para esse ficar na pos 0)
+			console.log(frutas)
+
+			frutas.pop() // Remove o item no final do array
+			frutas.shift() // Remove o item no inicio do array
+			console.log(frutas)
+			console.log("-------------------------------------------------------")
+
+			/* 203. Array - Método de pesquisa */
+			var cores = ["Azul", "Rosa", "Preto"]
+			console.log(cores.indexOf('Azul')) // Retorna o indice do item passado
+			console.log(cores.indexOf('Branco')) // Se não existir, retorna -1
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

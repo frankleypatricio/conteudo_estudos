@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>199-200. Arrays</title>
+		<style type="text/css">
+			body{
+				background-color: #313947;
+				color: white;
+			}
+		</style>
+
+		<script>
+			/* 199. Array básico - Prática */
+
+			var frutas = Array()
+			//var frutas = [] - Forma alternativa de se criar um array
+
+			frutas[0] = "Goiaba"
+			frutas[1] = "Maçã"
+			frutas['x'] = "Amora" // Não precisa ser necessariamente numérico
+			frutas[3] = "Coco"
+			frutas[4] = true // E não precisa ser os mesmos tipos de vars
+
+			console.log(frutas)
+			console.log(frutas['x'])
+
+			var cores = Array('Azul', 'Verde', 'Preto') // Declarando assim, os índices são numéricos iniciando do 0
+			//var cores = ['Azul', 'Verde', 'Preto'] - Alternativo
+			console.log(cores)
+
+			/* 200. Extra - Diferença entre o atributo length de variáveis do tipo string e array */
+			
+			var list = []
+			list[1] = 'a'
+			list[2] = 'b'
+			list[3] = 'c'
+			console.log(list.length) // O length meio que mostra o próximo valor do array (no caso aqui mostra 4, sendo que o tamanho é 3)
+
+			var string = 'abc'
+			console.log(string.length) // Em strings exibem corretamente
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
