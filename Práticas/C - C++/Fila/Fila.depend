@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1588535677 source:d:\htdocs\projetos no code blocks\c++\fila\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1589598550 source:d:\htdocs\projetos no code blocks\c\fila\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
