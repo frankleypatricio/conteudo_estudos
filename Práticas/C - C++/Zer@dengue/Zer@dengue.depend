@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1593733926 source:d:\htdocs\projetos no code blocks\c++\zer@dengue\main.cpp
+	<iostream>
+	<locale.h>
+	<queue>
+	<fstream>
+	<cstdio>
+	<cstring>
+	<stdexcept>
+	<map>
+	"Identificadores.h"
+	"Endereco.h"
+	"Cadastro.h"
+	"Usuario.h"
+	"Denuncia.h"
+	"Relatorio.h"
+	"Carregar.h"
+	"Atualizar.h"
+	"Registrar.h"
+
+1593280475 d:\htdocs\projetos no code blocks\c++\zer@dengue\endereco.h
+
+1589901813 d:\htdocs\projetos no code blocks\c++\zer@dengue\pessoa.h
+
+1593385325 d:\htdocs\projetos no code blocks\c++\zer@dengue\usuario.h
+
+1593385325 d:\htdocs\projetos no code blocks\c++\zer@dengue\cadastro.h
+
+1593559142 d:\htdocs\projetos no code blocks\c++\zer@dengue\denuncia.h
+
+1593730818 d:\htdocs\projetos no code blocks\c++\zer@dengue\relatorio.h
+
+1593733363 d:\htdocs\projetos no code blocks\c++\zer@dengue\registrar.h
+
+1593733362 d:\htdocs\projetos no code blocks\c++\zer@dengue\carregar.h
+
+1593733363 d:\htdocs\projetos no code blocks\c++\zer@dengue\atualizar.h
+
+1593733362 d:\htdocs\projetos no code blocks\c++\zer@dengue\identificadores.h
+
