@@ -30,6 +30,20 @@
 			var cores = ["Azul", "Rosa", "Preto"]
 			console.log(cores.indexOf('Azul')) // Retorna o indice do item passado
 			console.log(cores.indexOf('Branco')) // Se não existir, retorna -1
+
+			/* 204. Array - Ordenação de elementos */
+			var carros = ["BMW", "Strada", "Uno", "Celta"]
+			console.log(carros.sort()) // Organiza alfabeticamente
+
+			var num = [5,8,10,1,74,32,3]
+			console.log(num.sort(order)) // Organiza numericamente com uso da função, porque se não fica alfabeticamente
+
+			function order(a, b){ //Função padrão para ordenar numericamente
+				return a - b
+				// < 0 = a ordenado antes de b
+				// > 0 = b ordenado antes de a
+				// == 0 = a ordem é mantida
+			}
 		</script>
 	</head>
 	<body>
